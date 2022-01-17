@@ -1,0 +1,111 @@
+@import './_fonts';
+
+$textColor: #b3b3b3;
+$textColorHover: #fff;
+$itemSideBarSelected: #282828;
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+	color: $textColor;
+}
+.container{
+	font-family: 'circular-bold',sans-serif;
+	.sidebar{
+		background-color: #000;
+		width: 241px;
+		height: 85.6vh;
+		padding-top: 24px;
+		a.logo{
+			display: flex;
+			align-items: center;
+			margin-bottom: 24px;
+			padding: 0 24px;
+			svg{
+				width: 100%;
+				height: 40px;
+				max-width: 131px;
+				fill: #fff;
+			}//svg
+		}//a.logo
+		.sideOptions{
+			font-size: .8rem;
+			.home,.search,.library{
+				.itemOn{
+					background-color: $itemSideBarSelected;
+					color: #fff;
+				}
+				width: 100%;
+				padding: 0 8px;
+				a{
+					display: flex;
+					align-items: center;
+					height: 40px;
+					padding: 0 16px;
+					gap: 16px;
+
+					svg{
+						fill: $textColor;
+					}
+					svg:last-child{
+						display: none;
+					}
+					svg.on{
+						display: flex;
+						fill: #fff;
+						
+					}
+					svg.off{
+						display: none;
+						fill: $textColor;
+					}
+				}
+				a:hover{
+					color: $textColorHover;
+					svg{
+						fill: $textColorHover;
+					}
+				}//a.hover
+			}//home, search, library
+		}//sideOptions
+
+		.playlistOptions{
+			font-size: .8rem;
+			margin-top: 24px;
+			a.createPlaylist, a.likedSongs{
+				width: 100%;
+				padding: 8px 24px;
+				display: flex;
+				align-items: center;
+				div{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 24px;
+					height: 24px;
+					svg.create{
+						fill: #000;
+					}
+					svg.liked{
+						fill: #fff;
+					}
+				}
+				div{
+					margin-right: 16px;
+				}
+				div.create{
+					background-color: #fff;
+				}
+				div.liked{
+					background: linear-gradient(
+						135deg
+						,#450af5,#c4efd9);
+				}
+			}
+		}
+	}//sidebar
+}
