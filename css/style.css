@@ -152,4 +152,42 @@ a {
 .container .sidebar .playlistOptions a.createPlaylist div.liked, .container .sidebar .playlistOptions a.likedSongs div.liked {
   background: linear-gradient(135deg, #450af5, #c4efd9);
 }
+
+.container .sidebar .playlistOptions a.createPlaylist:hover, .container .sidebar .playlistOptions a.likedSongs:hover {
+  color: #fff;
+}
+
+.container .sidebar .division {
+  padding: 0 24px;
+}
+
+.container .sidebar .division hr {
+  height: 1px;
+  min-height: 1px;
+  background-color: #282828;
+  border: none;
+  margin: 8px 0;
+}
+
+.container .sidebar .playLists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 8px 24px;
+}
+
+.container .sidebar .playLists a {
+  cursor: default;
+  height: 32px;
+  font-family: circular-regular;
+  font-size: .9rem;
+}
+
+.container .sidebar .playLists a:hover {
+  color: #fff;
+}
 /*# sourceMappingURL=style.css.map */

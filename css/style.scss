@@ -105,6 +105,33 @@ a{
 						135deg
 						,#450af5,#c4efd9);
 				}
+				&:hover{
+					color: #fff;
+				}
+			}
+		}
+		.division{
+			padding: 0 24px;
+			hr{
+				height: 1px;
+				min-height: 1px;
+				background-color: #282828;
+				border: none;
+				margin: 8px 0;
+			}
+		}
+		.playLists{
+			display: flex;
+			flex-direction: column;
+			padding: 8px 24px;
+			a{
+				cursor: default;
+				height: 32px;
+				font-family: circular-regular;
+				font-size: .9rem;
+				&:hover{
+					color: #fff;
+				}
 			}
 		}
 	}//sidebar
