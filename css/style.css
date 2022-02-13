@@ -226,4 +226,76 @@ a {
 .container .sidebar .appInstall a:hover svg {
   fill: #fff;
 }
+
+.container .musicPlayer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 14px;
+  background-color: #181818;
+}
+
+.container .musicPlayer .trackMusic {
+  min-width: 180px;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .musicPlayer .trackMusic .trackImage {
+  width: 56px;
+}
+
+.container .musicPlayer .trackMusic .trackImage img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container .musicPlayer .trackMusic .trackName {
+  margin: 0 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .musicPlayer .trackMusic .trackName a:first-child {
+  color: #fff;
+  font-family: circular-regular;
+  font-size: .8rem;
+  line-height: 16px;
+}
+
+.container .musicPlayer .trackMusic .trackName a:first-child:hover {
+  text-decoration: underline;
+}
+
+.container .musicPlayer .trackMusic .trackName a:last-child {
+  font-size: .65rem;
+  color: #b3b3b3;
+  line-height: 16px;
+}
+
+.container .musicPlayer .trackMusic .trackName a:last-child:hover {
+  text-decoration: underline;
+  color: #fff;
+}
 /*# sourceMappingURL=style.css.map */

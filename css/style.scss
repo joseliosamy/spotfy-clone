@@ -161,4 +161,53 @@ a{
 			}
 		}
 	}//sidebar
+
+
+	.musicPlayer{
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		height: 90px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 14px;
+		background-color: #181818;
+		.trackMusic{
+			min-width: 180px;
+			width: 30%;
+			display: flex;
+			align-items: center;
+			.trackImage{
+				width: 56px;
+				img{
+					width: 100%;
+					object-fit: cover;
+				}
+			}
+		.trackName{
+			margin: 0 14px;
+			display: flex;
+			flex-direction: column;
+			a:first-child{
+				color: #fff;
+				font-family: circular-regular;
+				font-size: .8rem;
+				line-height: 16px;
+				&:hover{
+					text-decoration:underline;
+				}
+			}
+			a:last-child{
+				font-size: .65rem;
+				color: $textColor;
+				line-height: 16px;
+				&:hover{
+					text-decoration:underline;
+					color: #fff;
+				}
+			}
+		}
+		}
+	}//musicPlayer
 }
