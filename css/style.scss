@@ -16,6 +16,7 @@ a{
 .container{
 	font-family: 'circular-bold',sans-serif;
 	.sidebar{
+		position: relative;
 		background-color: #000;
 		width: 241px;
 		height: 85.6vh;
@@ -131,6 +132,31 @@ a{
 				font-size: .9rem;
 				&:hover{
 					color: #fff;
+				}
+			}
+		}
+		.appInstall{
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			a{
+				display: flex;
+				align-items: center;	
+				font-size: .8rem;
+				padding: 8px 24px;
+				transition: 200ms;
+				svg{
+					width: 20px;
+					margin-right: 18px;
+					fill: $textColor;
+					transition: 500ms;
+
+				}
+				&:hover{
+					color: #fff;
+					svg{
+						fill: #fff;
+					}
 				}
 			}
 		}

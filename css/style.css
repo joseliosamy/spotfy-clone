@@ -25,6 +25,7 @@ a {
 }
 
 .container .sidebar {
+  position: relative;
   background-color: #000;
   width: 241px;
   height: 85.6vh;
@@ -189,5 +190,40 @@ a {
 
 .container .sidebar .playLists a:hover {
   color: #fff;
+}
+
+.container .sidebar .appInstall {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.container .sidebar .appInstall a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: .8rem;
+  padding: 8px 24px;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.container .sidebar .appInstall a svg {
+  width: 20px;
+  margin-right: 18px;
+  fill: #b3b3b3;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.container .sidebar .appInstall a:hover {
+  color: #fff;
+}
+
+.container .sidebar .appInstall a:hover svg {
+  fill: #fff;
 }
 /*# sourceMappingURL=style.css.map */
