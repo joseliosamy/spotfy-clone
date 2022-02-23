@@ -14,12 +14,19 @@ a{
 	color: $textColor;
 }
 .container{
+	height: 100vh;
+	display: grid;
+	grid-template-areas: 
+	"sidebar musicsArea musicsArea"
+	"player player player";
+	grid-template-columns: auto 1fr;
 	font-family: 'circular-bold',sans-serif;
 	.sidebar{
+		grid-area: sidebar;
 		position: relative;
 		background-color: #000;
 		width: 241px;
-		height: 85.6vh;
+		min-height: 85.6vh;
 		padding-top: 24px;
 		a.logo{
 			display: flex;
@@ -48,7 +55,7 @@ a{
 					height: 40px;
 					padding: 0 16px;
 					gap: 16px;
-
+					transition: color 400ms;
 					svg{
 						fill: $textColor;
 					}
@@ -164,10 +171,9 @@ a{
 
 
 	.musicPlayer{
-		position: fixed;
-		bottom: 0;
+		grid-area: player;
 		width: 100%;
-		height: 90px;
+		height: auto;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -185,7 +191,7 @@ a{
 					object-fit: cover;
 				}
 			}
-		.trackName{
+			.trackName{
 			margin: 0 14px;
 			display: flex;
 			flex-direction: column;
@@ -207,7 +213,164 @@ a{
 					color: #fff;
 				}
 			}
+			}
 		}
+		.player{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			max-width: 722px;
+			width: 40%;
+			height: 90px;
+			.playerControls{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 12px;
+				font-family: circular-regular;
+				div{
+					margin: 0 5px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 8px;
+					svg{
+						width: 13px;
+						fill: $textColor;
+					}
+					&:hover{
+						svg{
+							fill: #fff;
+						}
+					}
+				}
+				div:first-child{
+					margin-right: 8px;
+				}
+				div:last-child{
+					margin-left: 8px;
+				}
+				div.playPause{
+					background-color: #fff;
+					padding: 8px;
+					border-radius: 50%;
+					svg{
+						fill: black;
+					}
+					&:hover{
+						box-shadow: 0 0 0 1.5px #fff;
+					}
+				}
+			}
+			.progressMusic{
+				font-size: 0.6875rem;
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.timePassed{
+					color: $textColor;
+				}
+				.progressBar{
+					position: relative;
+					display: flex;
+					width: 100%;
+					height: 4px;
+					margin: 0 8px;
+					background-color: #535353;
+					&:hover{
+						.progress{
+							background-color: #1db954;
+							&::after{
+								content: "";
+								position: absolute;
+								left: 93%;
+								top: 50%;
+								transform: translateY(-50%);
+								width: 12px;
+								height: 12px;
+								border-radius: 50%;
+								background-color: $textColor;
+							}
+						}
+					}
+					.progress{
+						width: 35%;
+						height: 4px;
+						position:	absolute;
+						background-color: $textColor;
+					}
+				}
+				.timeLeft{
+					color: $textColor;
+				}
+			}
+		}
+
+		.aditionalControls{
+			width: 30%;
+			min-width: 180px;
+			color: wheat;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			button{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 8px;
+				border: 0;
+				background-color: transparent;
+				&:hover{
+					svg{
+						fill: #fff;
+					}
+				}
+				svg{
+					fill: $textColor;
+				}
+				&.volume{
+					.volumeBar{
+						position: relative;
+						width: 93px;
+						height: 4px;
+						margin-left: 10px;
+						background-color: #535353;
+						.progressVolume{
+							position: absolute;
+							left: 0;
+							width: 60%;
+							height: 4px;
+							background-color: $textColor;
+							
+						}
+					}
+					&:hover{
+						.volumeBar{
+							.progressVolume{
+								background-color: #1db954;
+								&::after{
+									content: "";
+									position: absolute;
+									left: 90%;
+									top: 50%;
+									transform: translateY(-50%);
+									width: 12px;
+									height: 12px;
+									border-radius: 50%;
+									background-color: $textColor;
+								}
+							}
+						}
+						
+					}
+				}
+			}
 		}
 	}//musicPlayer
+
+	.musicsArea{
+		background-color: $itemSideBarSelected;
+		grid-area: musicsArea;
+	}
 }
