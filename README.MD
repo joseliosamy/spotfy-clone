@@ -3,13 +3,16 @@
 <br />
 <p align="center">
   <a href="https://spotfy-clone.vercel.app" target="_blank">
-    <img src="images/spotifyclone" alt="Logo" width="100%" height="100%">
+    <img src="images/banner.png" alt="Logo" width="100%" height="100%">
   </a>
 
   <h3 align="center">Spotify Clone</h3>
 
   <p align="center">
-    Clone do Spotify web em 2022.
+    🔧 Em desenvolvimento 🔧
+    <br />
+    Clone do Spotify web em 2022
+    <br />
     <br />
     <a href="https://spotfy-clone.vercel.app"><strong>Explore »</strong></a>
     <br />
